@@ -12,6 +12,14 @@ class _syntexObject:
     def __str__(self):
         return self._tex
 
+    def __add__(self, otex):
+        if isinstance(otex, self.__class__):
+            return _syntexObject(self._tex + otex._tex)
+        elif isinstance(otex, str):
+            return _syntexObject(self._tex + otex)
+        else:
+            raise TypeError("Unsupported addition between _syntexObject and {}".format(type(otex)))
+
     def _repr_latex_(self):
         return '$' + self._tex + '$'
 

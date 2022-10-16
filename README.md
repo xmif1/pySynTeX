@@ -43,7 +43,7 @@ results in the output
 
 Indeed, ```syntex``` and ```syntex_eval``` calls returns an object defining
 multiple different representations. For example, the package has support for displaying the result as typeset LaTeX if 
-run in a Jupyter notebook environment:
+run in a Jupyter notebook environment. More so, we can concatenate different symbolic expressions, as demonstrated below:
 
 ![Example usage in Jupyter Notebook](./example_jupyter.png?raw=true)
 
